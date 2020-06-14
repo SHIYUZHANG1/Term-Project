@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Delivery</title>
+
+   <style> 
+    body{background-image: url("images/foodpic.jpg");
+    background-color: rgba(255,255,255, 0.1);
+    background-blend-mode: lighten ;
+   font-family: cursive;
+   font-weight:bold;
+   text-align: center;
+   margin:30px;}
+
+
+    h1{text-align: center;}
+
+   #line{text-decoration: line-through;}
+
+    button{padding: 10px; margin-left: auto; margin-right: auto;}
+
+    form{text-align: center;}
+    
+    fieldset{margin-left: 400px;margin-right: 100px;}
+
+    a{text-decoration: none;}
+
+    ul#navigation { list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            position: fixed;
+            height: 100%;
+            background-color: transparent;}
+
+       </style>
+
+
+   
+
+</head>
+<body>
+    <h1>Order Page</h1>
+    <ul id="navigation">
+        <li><a href=sitemap.html>Shiyu's Kitchen</a></li>
+        <br>
+        <li>130 Arsenal St</li>
+        <li>Watertown, MA</li>
+        <li>02472</li>
+        <li>347-415-3546</li>
+        <br>
+        <li><a href=index.html>About Us</a></li>
+        <li><a href=menu.html>Menu</a></li>
+        <li><a href=order&delivery.html>Order & Delivery</a></li>
+        <li><a href=hourslocation.html>Hours & Location</a></li>
+        <li><a href=emailsignup.html>Signup</a></li>
+        <li><a href=Contactus.html>Contact Us</a></li>
+        
+    </ul>
+
+    <form method="post" action="mailto:szhang4@babson.edu">
+        <fieldset>
+            <legend>Choose Your Food:</legend>
+            <input type="checkbox" id="food1" name="order" value="Zongzi">  
+        <label for="food1">Zongzi</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1" maxlength="2"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food2" name="order" value="Egg Pancake">  
+        <label for="food2">Egg Pancake</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food3" name="order" value="Homemade Fried Chicken Wing">  
+        <label for="food3">Homemade Fried Chicken Wing</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food4" name="order" value="Brasied Chicken Leg">  
+        <label for="food4">Brasied Chicken Leg</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food5" name="order" value="Grilled Lamb Chop">  
+        <label for="food5">Grilled Lamb Chopg</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food6" name="order" value="Chicken Soup Fried Rice">  
+        <label for="food6">Chicken Soup Fried Rice</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food7" name="order" value="Oil Splash Noodle">  
+        <label for="food7">Oil Splash Noodle</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food8" name="order" value="Tomato-Fried-Egg Stir Noodle">  
+        <label for="food8">Tomato-Fried-Egg Stir Noodle</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+            <pre></pre>
+
+            <input type="checkbox" id="food9" name="order" value="Steamed Crab">  
+        <label for="food9">Steamed Crab</label>
+        <label>Qty:</label>&emsp;<input type="number" placeholder="1"></input>
+
+       </fieldset>
+
+    <br>
+    <br>
+    <br>
+
+       <fieldset>
+           <legend>How to Get Your Food；</legend>
+           <input checked type="checkbox" id="pickup" name="pickup" value="pickup">
+           <label for="pickup">Self-Pickup</label>
+
+
+        <div id="line">
+           <input type="checkbox">
+           <label>Delivery</label>
+        </div>
+
+        <p>*Due to COVID-19, Delivery method is curretly unavailable.
+            <pre></pre>
+            Self-Pickup Address: Unit 1118, 130 Arsenal St, Watertown, MA
+        </p>
+             </fieldset>
+     <br>
+     <br>
+     <br>
+
+
+        <fieldset>
+            <legend>Your Contact Information(* is requried):</legend>
+            <label>* Cell-phone:</label>&emsp;<input type="number" placeholder="Enter your number here"></input>
+            <pre></pre>
+            <label>E-mail Address:</label>&emsp;<input type="text" placeholder="Enter your email here"></input>
+            <p> We would send notification 30min prior to your meal is ready!</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Payment Method:</legend>
+            <input checked type="checkbox"> Cash </input>
+            <p> We are sorry that we only accept cash as payment.
+                We accept 0 tip, yay!
+            </p>
+        </fieldset>
+
+        <br>
+        <br>
+
+        <button>Place Your Order</button>
+    </form>
+
+
+    
+</body>
+</html>
