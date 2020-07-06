@@ -28,7 +28,21 @@
 
     a{text-decoration: none;}
 
-    fieldset{margin-left:400px;margin-right:400px}
+    fieldset {
+            margin-left: 400px;
+            margin-right: 400px;
+            height: 400px;
+        }
+
+        .btnReg {
+            width: 90px;
+            margin: 0 auto;
+            height: 35px;
+            line-height: 35px;
+            line-height: 35px;
+            cursor: pointer;
+            background-color: #00ff21;
+        }
     
 
     </style>
@@ -67,17 +81,38 @@
                 <label for="resource">How do you know Shiyu's Kitchen?</label>
             <select name="resource">
                 <option>Online</option>
-                <option>From Friend/option>
+                <option>From Friend</option>
                 <option>Self-explored</option>
-                <option>Other</option> </select>
-           
+                <option>Other</option> 
+            </select>
+ 
+            <br /><br />
+            <input checked id="che" type="checkbox" />
+            <label for="che">Sign me up for email updates</label>
+            <h3>Register for Getting $10 Coupon</h3>
+            <h2>Thank you for Registration!</h2>
+            <div class="btnReg" id="btnReg">Register</div>
         </fieldset>
 
-        <input checked type="checkbox"></input>
-        <label>Sign me up for email updates</label>
+        <script>
+            document.getElementById("btnReg").addEventListener("click", function () {
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                if (name == "" || email == "") {
+                    alert("Please complete");
+                    return;
+                }
 
-        <h3>Register for Getting $10 Coupon</h3>
+                let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+                if (!reg.test(email)) {
+                    alert("Incorrect email format");
+                    return;
+                };
 
-        <h2>Thank you for Registration!</h2>
+                alert("Congratulations on your successful registration");
+
+            });
+
+        </script>
 </body>
 </html>

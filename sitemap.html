@@ -61,7 +61,7 @@
         <table>
             <tr>
                 <td colspan="2"><img src="images/steamedcrab.jpg" width=300 height=200 ></td>
-                <td rowspan="2"><img src="images/lambchop.jpg"height=355></td>
+                <td rowspan="2"><img id="my" src="images/lambchop.jpg"height=355></td>
             </tr>
             <tr>
                 <td><img src="images/chickenwing.jpg" height=150></td>
@@ -77,7 +77,36 @@
     <br>
 
     <script>
-        alert("Welcome to Shiyu's Kitchen!")
+        alert("Welcome to Shiyu's Kitchen!");
+
+
+        let flag = false;
+        let startSize = 385;
+        document.getElementById("my").addEventListener("mouseover", function () {
+            if (flag == false) {
+                flag = true;
+                let time1 = setInterval(function () {
+                    document.getElementById("my").style.height = startSize + "px";
+                    startSize+=3;
+                    if (startSize > 500) {
+                        window.clearInterval(time1);
+                        flag = false;
+                    }
+                }, 60);
+            }
+        });
+
+
+        document.getElementById("my").addEventListener("mouseout", function () {
+                let time2 = setInterval(function () {
+                    document.getElementById("my").style.height = startSize + "px";
+                    startSize -= 3;
+                    if (startSize <=385) {
+                        window.clearInterval(time2);
+                    }
+                }, 20);
+        });
+        
     </script>
 
 </body>

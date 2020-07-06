@@ -96,23 +96,25 @@
     </div>
 
     <script>
-         function enlarger(){
-            let x = document.querySelector("img#shiyu");
-            let w = x.width;
-            w = w * 1.5;
-            x.width = w;
-        
-            console.log("Done!");}
+       let shiyu = document.getElementById("shiyu");
+        let currentRotate = 0;
+        shiyu.onclick = function () {
+            currentRotate = currentRotate + 90;
+            this.style.transform = 'rotate(' + currentRotate + 'deg)';
+        };
 
-        document.querySelector("img#shiyu").onmouseover = function(){enlarger();};
 
-        function reduction(){
-            let y = document.querySelector("img#shiyu");
-            let w1 = y.width;
-            w1 = w1 / 1.5;
-            y.width = w1;
+
+        let ps = document.getElementsByClassName("p");
+        for (let i = 0; i < ps.length; i++) {
+            ps[i].onmouseover = function () {
+                this.style.fontSize = "30px";
+            };
+            ps[i].onmouseout = function () {
+                this.style.fontSize = "15px";
+            };
         }
-        document.querySelector("img#shiyu").onmouseleave = function(){reduction();};
+
     </script>
 
     
